@@ -1,0 +1,37 @@
+/*body {
+    text-align: center;
+}*/
+
+/*.googleMap {
+    display: flex;
+    justify-content: center;
+}*/
+
+.main-container {
+    text-align: center;
+}
+
+#map { /* Map adjustments */
+    height: 700px;
+    width: 1300px;
+    border-radius: 3px;
+    /*text-align: center;*/
+}
+
+.googleMap {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+.tA textarea {
+    width: 320px;
+}
+
+.tA {
+    padding: 8.5px;
+}

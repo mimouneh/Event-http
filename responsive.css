@@ -1,0 +1,27 @@
+*{
+    box-sizing: border-box;
+    margin: 0 auto;
+
+}
+
+
+.row::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.col-6{
+    width: 50%;
+}
+.col-12{
+    width: 100%;
+}
+.col-4{
+    width:33.33% ;
+}
+.col-3{
+    width: 25%;
+}
+.col-12, .col-4, .col-6, .col-3{
+    float: left;
+}

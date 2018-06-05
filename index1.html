@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kidzonia</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Include jQuery -->
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+
+	<!-- Some google fonts to make it pretty -->
+	<link href="https://fonts.googleapis.com/css?family=BioRhyme" rel="stylesheet">
+
+	<!-- Include Knockout -->
+	<script type="text/javascript" src="http://knockoutjs.com/downloads/knockout-3.0.0.debug.js"></script>
+
+    <!-- Import booststrap and style.css -->
+	<link rel="stylesheet" href="css/bootstrap.css"> 
+	<link rel="stylesheet" type="text/css" href="css/style1.css">
+</head>
+<body>
+	<!-- Header -->
+	<header class="hd">
+		<span data-bind="html: title"></span>
+		<span data-bind="html: subtitle"></span>
+	</header>
+
+	<!-- Suggestion list: CSS overflow-y: auto; gives the scrolling down feature -->
+	<div class="row">
+	<input class="search-input" id="myInput" data-bind="value: query, valueUpdate: 'keyup'" width="50px" height="30px" autocomplete="off" type="search" placeholder="Var vill du gå ?">
+		<div class="col-md-3 suggestion-list">
+			<ul class="list-entry" id="myUL" data-bind="foreach: attractions">
+				<li class="list-element" data-bind="visible: filtered, click: $parent.list"> 
+					<span data-bind="text: name"></span><br>
+					<span data-bind="text: address"></span><br>
+					<a data-bind="attr: {href: url, title: name}"><span data-bind="text: name"></span></a>
+				</li>
+			</ul>
+		</div>
+
+		<!-- Map -->
+		<div class="col-md-9" id="map-window">
+
+			<!-- The search bar is placed on the map, inside the map window -->
+		    <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+			<div id="map"></div>
+		</div>
+
+	</div>		
+
+<div class="row">
+<div class="col-md-6 cont1">
+	<ul class="flex-container1">
+		<li class="flex-item">
+			<div id="weather-image-container">
+	          	<img src="img/weather_normal.jpg" class="normal" alt="Weather Underground Logo">
+	        </div>
+		</li>
+		<li class="flex-item forecast">
+			<p><span data-bind="html: weather1"></span></p>
+			<p><span data-bind="html: weather2"></span></p>
+		</li>
+</div>
+<div class="col-md-6 cont2">
+	<ul class="flex-container2">
+		<li class="flex-item">
+			<button type="submit" id="reset"><span data-bind="click: resetFunc"><img src="img/reset_normal.jpg" alt="submit" /></span></button>
+		</li>		
+	</ul>
+</div>
+</div>
+
+	<!-- Footer with project information -->
+	<footer>
+		<p><b>Hitta barns plats underhållning Project - Front-End Helsingborg | Student: Elias haskan</b></p>
+	</footer>
+
+	<!-- Include Knockout, Google maps API, and scripts-->
+	<script type="text/javascript" src="js/script1.js"></script>
+
+	<!-- Handling loading map malfunctions -->
+	<script type="text/javascript">
+		function foo() {
+			alert("There is a problem loading the map. Check the url");
+		}
+	</script>
+	<script async defer onerror="foo()" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfod5v_limhy-cOVMZ_0Bm1Ne4DOe0BhQ&libraries=places&callback=initMap"></script>
+
+</body>
+</html>

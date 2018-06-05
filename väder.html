@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="shortcut icon" type="Img/png" href="img/favicon.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body bgcolor="#edda74">
+    <div class="main-container">
+        <div class="textAk">
+        
+        </div>
+    </div>
+
+<center>
+    <form id="search-form">
+        <div class="row">
+          <br><br><br>  <h1>Get Current Forecast</h1>
+
+            <div class="sun col-12">
+                <i class="fa fa-3x fa-cloud"></i>
+                <i class="fa fa-cloud"></i>
+                <i class="fa fa-x fa-cloud"></i>
+            </div>
+
+
+            <input type="text" placeholder="City name..." id="cities_val">
+            <!-- <input type="radio" name="gender" value="metric" > ºC<br>
+                            <input type="radio" name="gender" value="imperial"> ºF<br> -->
+           <button type="submit" id="btn-1">Enter
+                <i class="fa fa-1x fa-location-arrow"></i>
+        </div>
+        <form id="search-form">
+            <div class="result">
+                    
+                        <p><i class="fa fa-1x fa-thermometer-empty">ºC</i></p>
+                        <p>Temprature</p>
+                            <div class="temp"></div>
+                        
+                        <i class="fa fa-1x fa-tint"></i>
+                        <p>Humidity<p>
+                            <div class="humidity"></div>
+                       
+                        <i class="fa fa-leaf"></i>
+                        <p>Wind</p>
+                            <div class="wind"></div>
+
+        <!-- infogad länk -->
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true&libraries=places"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+        
+        <script src="ajax.js"></script>
+    </div>
+</center>
+</body>
+
+</html>

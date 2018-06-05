@@ -1,0 +1,97 @@
+.text-white {
+  color: #fff;
+}
+
+.blockquote-le:before {
+  content: "\00A0 \2014";
+}
+
+
+.jumbotron {
+  display: flex;
+  -webkit-display:flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-image: url('../img/nightlife.jpg');
+  background-size: cover;
+}
+
+.jumbo-faded-bg {
+  background-color: rgba(0,0,0, 0.5);
+  margin: 0;
+  padding: 2rem;
+  color: #fff;
+}
+
+.catering-wrapper {
+  background-color: #f7931e;
+  display: block;
+  width: 100%;
+}
+
+/*.card-le {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-block-le {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-text-le {
+  height: 100%;
+}
+*/
+.btn-primary-le {
+  align-self: center;
+}
+
+.display-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.line-white {
+height: 1px;
+color: #fff;
+background-color: #fff;
+border: none;
+}
+
+
+/****************************************
+MEDIA QUERYS
+****************************************/
+
+
+
+@media (min-width:768px){
+
+  .row {
+  display: flex;
+  flex-wrap: wrap;
+  }
+
+  .row-flex > div[class*='col-'] {
+  display: flex;
+  flex:0 0 auto;
+  }
+  
+}
+
+@media (min-width:992px){
+  
+  .line-height {
+    line-height: 2;
+    font-weight: 100;
+    font-size: 1.25rem;
+  }
+  
+  
+}
+
